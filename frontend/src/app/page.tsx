@@ -2,6 +2,7 @@ import { BankStrip } from "@/components/landing/BankStrip";
 import { Features } from "@/components/landing/Features";
 import { Hero } from "@/components/landing/Hero";
 import { Navbar } from "@/components/landing/Navbar";
+import { Pricing } from "@/components/landing/Pricing";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
         <Hero />
         <BankStrip />
         <Features />
+        <Pricing />
       </main>
     </>
   );
