@@ -9,10 +9,10 @@ export function Hero() {
       {/* Soft background glow */}
       <div
         aria-hidden
-        className="bg-brand-gradient pointer-events-none absolute -top-40 right-0 h-[480px] w-[480px] rounded-full opacity-25 blur-3xl"
+        className="bg-brand-gradient pointer-events-none absolute -top-40 right-0 h-120 w-120 rounded-full opacity-25 blur-3xl"
       />
 
-      <div className="relative mx-auto grid max-w-6xl items-center gap-16 px-4 pt-16 pb-24 sm:px-6 lg:grid-cols-2 lg:pt-24">
+      <div className="relative mx-auto grid max-w-6xl grid-cols-1 items-center gap-16 px-4 pt-16 pb-24 sm:px-6 lg:grid-cols-2 lg:pt-24">
         <div>
           <span className="inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-1 text-xs font-medium text-brand-600 ring-1 ring-brand-200">
             <Sparkles className="h-3.5 w-3.5" aria-hidden />

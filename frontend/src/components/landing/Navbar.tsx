@@ -29,9 +29,12 @@ export function Navbar() {
         </ul>
 
         <div className="flex items-center gap-2">
-          <ButtonLink href="/sign-in" variant="secondary" className="hidden sm:inline-flex">
-            Log in
-          </ButtonLink>
+          {/* Wrapper handles visibility: `hidden` on the button would clash with its inline-flex */}
+          <span className="hidden sm:block">
+            <ButtonLink href="/sign-in" variant="secondary">
+              Log in
+            </ButtonLink>
+          </span>
           <ButtonLink href="/sign-up">Sign up</ButtonLink>
         </div>
       </nav>
