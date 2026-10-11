@@ -22,7 +22,7 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
 
 def create_app() -> FastAPI:
     settings = get_settings()
-    app = FastAPI(title="SlipWise API", version="0.1.0", lifespan=lifespan)
+    app = FastAPI(title="LSYM API", version="0.1.0", lifespan=lifespan)
 
     app.add_middleware(
         CORSMiddleware,

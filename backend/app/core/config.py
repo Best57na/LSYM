@@ -17,7 +17,7 @@ class Settings(BaseSettings):
 
     # SecretStr hides the value in logs and reprs; call .get_secret_value() to use it.
     mongodb_uri: SecretStr
-    mongodb_db_name: str = "slipwise"
+    mongodb_db_name: str = "lsym"
     mongodb_timeout_ms: int = 3000
 
     # Parsed from a JSON array in the env var, e.g. CORS_ORIGINS=["http://localhost:3000"]
