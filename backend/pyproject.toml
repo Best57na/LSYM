@@ -1,0 +1,46 @@
+[project]
+name = "slipwise-backend"
+version = "0.1.0"
+description = "SlipWise API: FastAPI service that extracts expenses from Thai bank slips"
+authors = [
+    { name = "Best57na", email = "thanakrit.wtpn@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi[standard]>=0.143.0",
+    "pydantic-settings>=2.15.0",
+    "pymongo>=4.18.3",
+]
+
+[dependency-groups]
+dev = [
+    "httpx2>=2.13.1",
+    "pyright>=1.1.414",
+    "pytest>=9.1.1",
+    "ruff>=0.17.0",
+]
+
+# This is an application, not a library: uv installs dependencies only and
+# never tries to build/publish the project itself.
+[tool.uv]
+package = false
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+
+[tool.ruff.lint]
+# E/F: pycodestyle + pyflakes, I: import sorting, B: bugbear, UP: pyupgrade
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# Lets tests `import app` from the backend/ folder.
+pythonpath = ["."]
+
+[tool.pyright]
+include = ["app", "tests"]
+pythonVersion = "3.13"
+typeCheckingMode = "standard"
+venvPath = "."
+venv = ".venv"

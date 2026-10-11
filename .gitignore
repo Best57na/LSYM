@@ -1,0 +1,25 @@
+# Secrets: never commit real env files (examples are allowed)
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Node / Next.js (frontend/.gitignore has the full list)
+node_modules/
+.next/
+out/
+
+# Editors / OS
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
