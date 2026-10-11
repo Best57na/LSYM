@@ -27,8 +27,15 @@ const transactions = [
 
 export function HeroPreview() {
   return (
-    <div className="relative mx-auto w-full max-w-md lg:max-w-none" role="img" aria-label="Preview of the SlipWise dashboard">
-      <div aria-hidden className="rounded-3xl bg-white p-5 shadow-float ring-1 ring-brand-100 sm:p-6">
+    <div
+      className="relative mx-auto mb-12 w-full max-w-md lg:max-w-none"
+      role="img"
+      aria-label="Preview of the SlipWise dashboard"
+    >
+      <div
+        aria-hidden
+        className="rounded-3xl bg-white p-5 pb-28 shadow-float ring-1 ring-brand-100 sm:p-6 sm:pb-28"
+      >
         <div className="flex items-center justify-between">
           <p className="text-lg font-semibold text-brand-600">Dashboard</p>
           <span className="rounded-full bg-brand-50 px-3 py-1 text-xs font-medium text-brand-600">
@@ -65,7 +72,7 @@ export function HeroPreview() {
       {/* Floating "slip read" card */}
       <div
         aria-hidden
-        className="absolute -bottom-8 -left-4 w-60 rounded-2xl bg-white p-4 shadow-float ring-1 ring-brand-100 sm:-left-10"
+        className="absolute -bottom-12 left-4 w-60 rounded-2xl bg-white p-4 shadow-float ring-1 ring-brand-100 sm:-left-10"
       >
         <div className="flex items-center gap-2 text-sm font-semibold text-ink">
           <ScanLine className="h-4 w-4 text-brand-500" />
