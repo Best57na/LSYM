@@ -24,7 +24,7 @@ export function Hero() {
           </h1>
 
           <p className="mt-5 max-w-lg text-lg text-muted">
-            Snap a transfer slip or receipt. SlipWise reads the amount, date, bank and recipient,
+            Snap a transfer slip or receipt. LSYM reads the amount, date, bank and recipient,
             suggests a category, and you confirm in one tap.
           </p>
 

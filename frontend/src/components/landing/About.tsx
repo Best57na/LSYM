@@ -4,7 +4,7 @@ const points = [
   {
     icon: Smartphone,
     title: "Made for PromptPay",
-    text: "Most Thai payments end with a slip screenshot. SlipWise turns that screenshot into a record.",
+    text: "Most Thai payments end with a slip screenshot. LSYM turns that screenshot into a record.",
   },
   {
     icon: Zap,

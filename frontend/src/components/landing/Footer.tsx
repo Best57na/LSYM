@@ -59,7 +59,7 @@ export function Footer() {
 
       <div className="border-t border-line">
         <p className="mx-auto max-w-6xl px-4 py-6 text-xs text-muted sm:px-6">
-          © 2026 SlipWise. All rights reserved.
+          © 2026 LSYM. All rights reserved.
         </p>
       </div>
     </footer>

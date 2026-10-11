@@ -15,7 +15,7 @@ const notoSansThai = Noto_Sans_Thai({
 });
 
 export const metadata: Metadata = {
-  title: "SlipWise",
+  title: "LSYM | Let's Save Your Money",
   description: "AI-powered expense tracker for Thai bank slips",
 };
 

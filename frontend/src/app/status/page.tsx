@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { HealthStatus } from "@/components/HealthStatus";
 
 export const metadata: Metadata = {
-  title: "Status | SlipWise",
+  title: "Status | LSYM",
 };
 
 export default function StatusPage() {

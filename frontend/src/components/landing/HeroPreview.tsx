@@ -30,7 +30,7 @@ export function HeroPreview() {
     <div
       className="relative mx-auto mb-12 w-full max-w-md lg:max-w-none"
       role="img"
-      aria-label="Preview of the SlipWise dashboard"
+      aria-label="Preview of the LSYM dashboard"
     >
       <div
         aria-hidden
