@@ -43,6 +43,13 @@ npm install
 cp .env.example .env.local # NEXT_PUBLIC_API_URL defaults to http://localhost:8000
 ```
 
+Clerk keys: either copy them from the [Clerk dashboard](https://dashboard.clerk.com) (API keys) into
+`.env.local`, or run `npx clerk init --accountless` in `frontend/` to get temporary development keys
+without an account. Set the instance's minimum password length to 8 so it matches the sign-up form.
+
+In development, sign up with an email containing `+clerk_test` (e.g. `jane+clerk_test@example.com`)
+and use the code `424242`. No real email is sent.
+
 ## Run
 
 Use two terminals:
