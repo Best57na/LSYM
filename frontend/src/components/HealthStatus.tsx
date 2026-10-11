@@ -25,14 +25,14 @@ export function HealthStatus() {
   }, []);
 
   return (
-    <section className="w-full rounded-xl border border-zinc-200 p-5 dark:border-zinc-800">
-      <h2 className="text-sm font-medium text-zinc-500">Backend status</h2>
-      <p className="mt-1 font-mono text-xs text-zinc-400">{API_URL}/health</p>
+    <section className="w-full rounded-2xl bg-white p-5 shadow-card">
+      <h2 className="text-sm font-medium text-muted">Backend status</h2>
+      <p className="mt-1 font-mono text-xs text-muted">{API_URL}/health</p>
 
       {state.kind === "loading" && <p className="mt-3">Checking…</p>}
 
       {state.kind === "error" && (
-        <p className="mt-3 text-red-600 dark:text-red-400">
+        <p className="mt-3 text-rose">
           API unreachable: {state.message}. Is the backend running on port 8000?
         </p>
       )}
@@ -50,9 +50,9 @@ export function HealthStatus() {
 function StatusRow({ label, ok }: { label: string; ok: boolean }) {
   return (
     <li className="flex items-center gap-2">
-      <span className={`h-2.5 w-2.5 rounded-full ${ok ? "bg-emerald-500" : "bg-amber-500"}`} />
+      <span className={`h-2.5 w-2.5 rounded-full ${ok ? "bg-income" : "bg-expense"}`} />
       <span>{label}</span>
-      <span className="text-zinc-500">{ok ? "ok" : "unreachable"}</span>
+      <span className="text-muted">{ok ? "ok" : "unreachable"}</span>
     </li>
   );
 }

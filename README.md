@@ -1,4 +1,4 @@
-# SlipWise
+# LSYM: Let's Save Your Money
 
 AI-powered expense tracker for Thai bank transfer slips and receipts. Upload a slip, Claude reads the
 amount, date, bank and recipient and suggests a category, and you confirm before anything is saved.

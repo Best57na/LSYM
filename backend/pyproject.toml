@@ -1,7 +1,7 @@
 [project]
-name = "slipwise-backend"
+name = "lsym-backend"
 version = "0.1.0"
-description = "SlipWise API: FastAPI service that extracts expenses from Thai bank slips"
+description = "LSYM API: FastAPI service that extracts expenses from Thai bank slips"
 authors = [
     { name = "Best57na", email = "thanakrit.wtpn@gmail.com" }
 ]

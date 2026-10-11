@@ -16,7 +16,7 @@ def create_mongo_client(settings: Settings) -> AsyncMongoClient[MongoDocument]:
     return AsyncMongoClient(
         settings.mongodb_uri.get_secret_value(),
         serverSelectionTimeoutMS=settings.mongodb_timeout_ms,
-        appname="slipwise-backend",
+        appname="lsym-backend",
     )
 
 

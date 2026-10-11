@@ -1,16 +1,25 @@
-import { HealthStatus } from "@/components/HealthStatus";
+import { About } from "@/components/landing/About";
+import { BankStrip } from "@/components/landing/BankStrip";
+import { CtaBanner } from "@/components/landing/CtaBanner";
+import { Features } from "@/components/landing/Features";
+import { Footer } from "@/components/landing/Footer";
+import { Hero } from "@/components/landing/Hero";
+import { Navbar } from "@/components/landing/Navbar";
+import { Pricing } from "@/components/landing/Pricing";
 
 export default function Home() {
   return (
-    <main className="mx-auto flex w-full max-w-xl flex-1 flex-col justify-center gap-8 px-6 py-16">
-      <div>
-        <h1 className="text-3xl font-semibold tracking-tight">SlipWise</h1>
-        <p className="mt-2 text-zinc-600 dark:text-zinc-400">
-          Upload a Thai bank slip or receipt. AI reads the amount, date, bank and recipient, and
-          you confirm before it is saved.
-        </p>
-      </div>
-      <HealthStatus />
-    </main>
+    <>
+      <Navbar />
+      <main className="flex-1">
+        <Hero />
+        <BankStrip />
+        <Features />
+        <Pricing />
+        <About />
+        <CtaBanner />
+      </main>
+      <Footer />
+    </>
   );
 }
