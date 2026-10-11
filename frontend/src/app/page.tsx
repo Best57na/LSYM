@@ -1,3 +1,4 @@
+import { About } from "@/components/landing/About";
 import { BankStrip } from "@/components/landing/BankStrip";
 import { Features } from "@/components/landing/Features";
 import { Hero } from "@/components/landing/Hero";
@@ -13,6 +14,7 @@ export default function Home() {
         <BankStrip />
         <Features />
         <Pricing />
+        <About />
       </main>
     </>
   );
