@@ -57,8 +57,9 @@ npm run lint && npx tsc --noEmit
 
 ## Rules
 
-- **Git workflow:** branch off `dev` for every feature (`feat/...`, `fix/...`). Never commit directly to `main` or `dev`.
-- **Commits:** use Conventional Commits (`feat:`, `fix:`, `chore:`, `docs:`, `test:`, `refactor:`).
-- **PRs:** open a pull request into `dev`. Never merge it yourself.
+- **Git workflow:** every feature gets its own branch off `dev`, named after the feature (`feat/landing-page`, `fix/...`, `chore/...`). Never commit directly to `main` or `dev`.
+- **Commits:** commit in small parts as each piece works (one logical change per commit), using Conventional Commits (`feat:`, `fix:`, `chore:`, `docs:`, `test:`, `refactor:`).
+- **Review gate:** when the feature is done, stop and wait for the user to check it. Do not push before the user says OK.
+- **After OK:** push the branch and open a PR into `dev`.
 - **Secrets:** never commit secrets. `.env` files stay git-ignored, and only `.env.example` files with placeholder values are committed.
 - **Slip data:** never store raw slip or receipt images, and never store account numbers, full or partial. Process images in memory and discard them after extraction. Never log request bodies or raw AI responses.
