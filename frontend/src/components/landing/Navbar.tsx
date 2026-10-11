@@ -13,7 +13,7 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-40 border-b border-line/70 bg-white/80 backdrop-blur">
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
-        <Logo />
+        <Logo preload />
 
         <ul className="hidden items-center gap-8 md:flex">
           {links.map((link) => (

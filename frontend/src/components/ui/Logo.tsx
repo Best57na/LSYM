@@ -1,13 +1,30 @@
-import { ReceiptText } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
-export function Logo() {
+// Transparent PNGs cut from the brand logo. "mark" drops the tagline, which is
+// unreadable at navbar size; "full" keeps "LET'S SAVE YOUR MONEY".
+const variants = {
+  mark: { src: "/brand/lsym-logo-mark.png", width: 690, height: 240, className: "h-10 w-auto" },
+  full: { src: "/brand/lsym-logo.png", width: 691, height: 240, className: "h-14 w-auto" },
+};
+
+type LogoProps = {
+  variant?: keyof typeof variants;
+  preload?: boolean;
+};
+
+export function Logo({ variant = "mark", preload = false }: LogoProps) {
+  const logo = variants[variant];
   return (
-    <Link href="/" className="inline-flex items-center gap-2" aria-label="SlipWise home">
-      <span className="bg-brand-gradient grid h-8 w-8 place-items-center rounded-lg text-white">
-        <ReceiptText className="h-4.5 w-4.5" aria-hidden />
-      </span>
-      <span className="text-lg font-semibold tracking-wide text-brand-600">SlipWise</span>
+    <Link href="/" className="inline-flex shrink-0 items-center" aria-label="LSYM home">
+      <Image
+        src={logo.src}
+        alt="LSYM: Let's Save Your Money"
+        width={logo.width}
+        height={logo.height}
+        className={logo.className}
+        preload={preload}
+      />
     </Link>
   );
 }

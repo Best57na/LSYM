@@ -32,7 +32,7 @@ export function Footer() {
     <footer className="border-t border-line bg-white">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-[1.5fr_repeat(3,1fr)]">
         <div>
-          <Logo />
+          <Logo variant="full" />
           <p className="mt-3 max-w-xs text-sm text-muted">
             AI expense tracking for Thai bank slips and receipts.
           </p>
