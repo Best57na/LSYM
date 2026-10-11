@@ -1,9 +1,16 @@
-import { SignUp } from "@clerk/nextjs";
+import type { Metadata } from "next";
+
+import { AuthShell } from "@/components/auth/AuthShell";
+import { SignUpForm } from "@/components/auth/SignUpForm";
+
+export const metadata: Metadata = {
+  title: "Create your account | LSYM",
+};
 
 export default function SignUpPage() {
   return (
-    <div className="flex min-h-screen items-center justify-center">
-      <SignUp />
-    </div>
+    <AuthShell>
+      <SignUpForm />
+    </AuthShell>
   );
 }
