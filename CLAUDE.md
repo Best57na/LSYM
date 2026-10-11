@@ -57,7 +57,8 @@ npm run lint && npx tsc --noEmit
 
 ## Rules
 
-- **Git workflow:** every feature gets its own branch off `dev`, named after the feature (`feat/landing-page`, `fix/...`, `chore/...`). Never commit directly to `main` or `dev`.
+- **Git workflow:** every feature gets its own branch off `dev`, named after the feature (`feat/landing-page`, `fix/...`). Never commit directly to `main` or `dev`.
+  - Small non-feature changes (CLAUDE.md, docs, config) do not get their own branch. Commit them on the next feature branch.
 - **Commits:** commit in small parts as each piece works (one logical change per commit). Every message follows Conventional Commits:
   - Format: `type: short description`, with no space before the colon. Optional scope: `type(scope): ...`
   - Description: lowercase, imperative ("add", not "added"), no trailing period, subject line under 72 characters
