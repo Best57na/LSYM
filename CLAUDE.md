@@ -1,4 +1,4 @@
-# SlipWise
+# LSYM: Let's Save Your Money
 
 AI-powered expense tracker and portfolio project. A user uploads a Thai bank transfer slip or receipt.
 The Claude API (vision) extracts amount, date, bank and recipient and suggests a category. The user
