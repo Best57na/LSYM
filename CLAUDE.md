@@ -58,7 +58,11 @@ npm run lint && npx tsc --noEmit
 ## Rules
 
 - **Git workflow:** every feature gets its own branch off `dev`, named after the feature (`feat/landing-page`, `fix/...`, `chore/...`). Never commit directly to `main` or `dev`.
-- **Commits:** commit in small parts as each piece works (one logical change per commit), using Conventional Commits (`feat:`, `fix:`, `chore:`, `docs:`, `test:`, `refactor:`).
+- **Commits:** commit in small parts as each piece works (one logical change per commit). Every message follows Conventional Commits:
+  - Format: `type: short description`, with no space before the colon. Optional scope: `type(scope): ...`
+  - Description: lowercase, imperative ("add", not "added"), no trailing period, subject line under 72 characters
+  - Types: `feat` (new feature), `fix` (bug fix), `docs`, `style` (formatting only), `refactor`, `test`, `chore` (tooling, deps, config)
+  - Examples: `feat: add footer`, `fix: handle empty slip upload`, `feat(backend): add expenses list endpoint`, `chore: add ruff to dev dependencies`
 - **Review gate:** when the feature is done, stop and wait for the user to check it. Do not push before the user says OK.
 - **After OK:** push the branch and open a PR into `dev`.
 - **Secrets:** never commit secrets. `.env` files stay git-ignored, and only `.env.example` files with placeholder values are committed.
