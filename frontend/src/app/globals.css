@@ -1,26 +1,47 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Brand theme: soft periwinkle/lavender on a cool white canvas. */
+@theme {
+  --color-brand-50: #f3f4fe;
+  --color-brand-100: #e6e9fd;
+  --color-brand-200: #cdd3fb;
+  --color-brand-300: #aab4f6;
+  --color-brand-400: #8695ef;
+  --color-brand-500: #6a79e6;
+  --color-brand-600: #5563d6;
+  --color-brand-700: #4651b4;
+  --color-brand-800: #3a4390;
+  --color-brand-900: #2f3672;
+
+  --color-ink: #1e2140;
+  --color-muted: #7c82a1;
+  --color-line: #e8eaf4;
+  --color-canvas: #f7f8fd;
+
+  /* Data accents: income, expense, and category chips */
+  --color-income: #1faf7a;
+  --color-expense: #f08a3c;
+  --color-rose: #e25c9c;
+  --color-violet: #9b6bf2;
+
+  --shadow-card: 0 10px 30px -14px rgb(70 81 180 / 0.22);
+  --shadow-float: 0 24px 60px -20px rgb(70 81 180 / 0.35);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-poppins), var(--font-noto-thai), ui-sans-serif, system-ui, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Blue -> lavender -> pink gradient used on the balance card and accents. */
+@utility bg-brand-gradient {
+  background-image: linear-gradient(135deg, #9aa8f5 0%, #b3a2f0 52%, #e3a6e0 100%);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  background: var(--color-canvas);
+  color: var(--color-ink);
 }
