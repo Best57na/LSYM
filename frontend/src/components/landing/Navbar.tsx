@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { ButtonLink } from "@/components/ui/ButtonLink";
+import { NavAuthButtons } from "@/components/landing/NavAuthButtons";
 import { Logo } from "@/components/ui/Logo";
 
 const links = [
@@ -28,15 +28,7 @@ export function Navbar() {
           ))}
         </ul>
 
-        <div className="flex items-center gap-2">
-          {/* Wrapper handles visibility: `hidden` on the button would clash with its inline-flex */}
-          <span className="hidden sm:block">
-            <ButtonLink href="/sign-in" variant="secondary">
-              Log in
-            </ButtonLink>
-          </span>
-          <ButtonLink href="/sign-up">Sign up</ButtonLink>
-        </div>
+        <NavAuthButtons />
       </nav>
     </header>
   );
